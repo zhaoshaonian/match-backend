@@ -1,0 +1,8 @@
+routers.js
+build/*
+config/*
+test/*
+src/store/*
+src/utils/*
+src/router/*
+src/*

@@ -1,0 +1,10 @@
+{"name"      : "sjzq-backend",
+  "script"    : "app.js",
+  "instances" : "1",
+  "exec_mode"    : "cluster_mode",
+//  "args"      : ['prod','3000'],
+  "merge_logs" : true,
+//   "error_file" : "/data/.pm2/logs/account-err.log",
+//   "out_file"   : "/data/.pm2/logs/account-out.log",
+  "max_memory_restart": "600M"
+}
