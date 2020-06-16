@@ -1,4 +1,4 @@
-FROM nginx:1.17.8
+FROM nginx:1.18.0
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD default.conf /etc/nginx/conf.d/default.conf
 ADD dist /usr/share/nginx/html
