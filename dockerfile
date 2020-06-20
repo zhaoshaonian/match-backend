@@ -1,6 +1,7 @@
-# 设置基础镜像
 FROM nginx
-# 定义作者
-MAINTAINER murong Su
-# 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面
-COPY dist/  /usr/share/nginx/html/
+ADD nginx.conf /etc/nginx/nginx.conf
+ADD default.conf /etc/nginx/conf.d/default.conf
+ADD dist /usr/share/nginx/html
+RUN chown nginx:nginx -R /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;"]
