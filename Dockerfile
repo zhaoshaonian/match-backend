@@ -1,6 +1,6 @@
 FROM nginx
-ADD nginx.conf /usr/share/nginx/conf/nginx.conf
-ADD dist /usr/share/nginx/html
-RUN chown nginx:nginx -R /usr/share/nginx/html
+ADD nginx.conf /usr/local/nginx/conf/nginx.conf
+ADD dist /usr/local/nginx/html
+RUN chown nginx:nginx -R /usr/local/nginx/html
 EXPOSE 80
 ENTRYPOINT [ "nginx", "-g", "daemon off;"]
